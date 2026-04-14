@@ -7,6 +7,11 @@ async function g1() {
         x25()
     ]);
 
-    cfg = m1 + m2 + m3;
+    const mix = (m1 + m2 + m3).trim();
+
+    cfg = atob(
+        mix.split("").reverse().join("")
+    );
+
     return cfg;
 }
